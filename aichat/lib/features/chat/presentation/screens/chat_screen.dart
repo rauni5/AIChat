@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import '../../../../core/di/injection.dart';
 import '../../../auth/presentation/providers/auth_provider.dart';
 import '../../../gamification/presentation/providers/gamification_provider.dart';
@@ -27,7 +28,9 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
       final result = await sl.getPreferences(GetPreferencesParams(uid));
       result.fold(
         (_) {},
-        (prefs) => ref.read(gamificationProvider.notifier).setInterests(prefs.interests),
+        (prefs) => ref
+            .read(gamificationProvider.notifier)
+            .setInterests(prefs.interests),
       );
       ref.read(gamificationProvider.notifier).loadStats(uid);
     });
@@ -45,9 +48,9 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
 
     ref.listen(chatProvider(args), (previous, next) {
       if (next.errorMessage != null) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text(next.errorMessage!)),
-        );
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(SnackBar(content: Text(next.errorMessage!)));
       }
     });
 
@@ -57,7 +60,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
         actions: [
           IconButton(
             icon: const Icon(Icons.person_outline),
-            onPressed: () => Navigator.of(context).pushNamed('/profile'),
+            onPressed: () => context.push('/profile'),
           ),
         ],
       ),
@@ -75,7 +78,8 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
           ),
           ChatInputField(
             isSending: chatState.isSending,
-            onSend: (text) => ref.read(chatProvider(args).notifier).sendMessage(text),
+            onSend: (text) =>
+                ref.read(chatProvider(args).notifier).sendMessage(text),
           ),
         ],
       ),
