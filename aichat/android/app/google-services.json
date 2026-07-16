@@ -30,43 +30,13 @@
             {
               "client_id": "626878627787-iokjgq1f4m9pkfbtie20ub16a8ihfhla.apps.googleusercontent.com",
               "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:626878627787:android:6a8d58d743d809abe9004e",
-        "android_client_info": {
-          "package_name": "com.skillpath.ai_chat_app"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "626878627787-e522sjot2nfs3vgoq97cr3jtuol5kocb.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.skillpath.ai_chat_app",
-            "certificate_hash": "8c130474265b7b1ea61288f5b4a72a8eb9d6b12d"
-          }
-        },
-        {
-          "client_id": "626878627787-iokjgq1f4m9pkfbtie20ub16a8ihfhla.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDedqy85CPaG3R68eFlzeBR3K39KN_3Nog"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
+            },
             {
-              "client_id": "626878627787-iokjgq1f4m9pkfbtie20ub16a8ihfhla.apps.googleusercontent.com",
-              "client_type": 3
+              "client_id": "626878627787-su49tnr443sioqbcs3u21l2t62cchffs.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.aichat.aichat"
+              }
             }
           ]
         }
