@@ -4,7 +4,7 @@ import 'package:go_router/go_router.dart';
 
 import '../../features/auth/presentation/providers/auth_provider.dart';
 import '../../features/auth/presentation/screens/login_screen.dart';
-import '../../features/auth/presentation/screens/splash_screen.dart';
+import '../../features/splash/presentation/screens/splash_screen.dart';
 import '../../features/chat/presentation/screens/chat_screen.dart';
 import '../../features/gamification/presentation/screens/profile_screen.dart';
 import '../../features/onboarding/presentation/screens/interest_selection_screen.dart';
