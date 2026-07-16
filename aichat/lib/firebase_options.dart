@@ -57,7 +57,6 @@ class DefaultFirebaseOptions {
     databaseURL: 'https://friendlychat-3dcf1-default-rtdb.firebaseio.com',
     storageBucket: 'friendlychat-3dcf1.appspot.com',
   );
-
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyDgriVlhLSS2N1yZTUJos6JBmG7mENLeW8',
     appId: '1:626878627787:ios:bc36210e16347000e9004e',
