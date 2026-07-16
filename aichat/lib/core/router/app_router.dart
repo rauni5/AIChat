@@ -61,7 +61,9 @@ final routerProvider = Provider<GoRouter>((ref) {
       ),
       GoRoute(path: '/chat', builder: (context, state) => const ChatScreen()),
       GoRoute(
-          path: '/profile', builder: (context, state) => const ProfileScreen()),
+        path: '/profile',
+        builder: (context, state) => const ProfileScreen(),
+      ),
     ],
   );
 });
@@ -71,6 +73,6 @@ final routerProvider = Provider<GoRouter>((ref) {
 /// itself to rebuild (see note above on why that matters).
 class _AuthStatusListenable extends ChangeNotifier {
   _AuthStatusListenable(Ref ref) {
-    ref.listen(authProvider, (_, __) => notifyListeners());
+    ref.listen(authProvider, (_, _) => notifyListeners());
   }
 }
